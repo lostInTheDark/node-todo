@@ -1,0 +1,27 @@
+
+<h2>Index page</h2>
+
+{{#if todos.length}}
+<ul class="todo-wrapper">
+    {{#each todos}}
+        <li class="todo">
+            <form action="/complete" method="POST">
+                <label>
+                    {{#if this.completed}}
+                        <input type="checkbox" checked name="completed">
+                        <span class="completed">{{ this.title }}</span>
+                    {{else}}
+                        <input type="checkbox" name="completed">
+                        <span>{{ this.title }}</span>
+                    {{/if}}
+                    
+                    <input type="hidden" value="{{this._id}}" name="id">
+                </label>
+            </form>
+        </li>
+    {{/each}}
+</ul>
+{{else}}
+    <p>No todos</p>
+{{/if}}
+<script src="/handler.js"></script>
