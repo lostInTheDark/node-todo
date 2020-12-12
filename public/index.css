@@ -4,6 +4,7 @@
 
 .todo{
     margin-bottom: 1rem;
+    height: 100%;
 }
 
 .todo span.completed{
@@ -18,8 +19,14 @@
     cursor: pointer;
     background-color: #f3f3f3;
     padding: 1rem;
+    overflow: auto;
+    transition: all ease .2s;
 }
 
-.todo i{
-    z-index: 1  ;
+.todo label:hover{
+    transform: scale(1.2);
+}
+
+.todo input{
+    z-index: 1;
 }
