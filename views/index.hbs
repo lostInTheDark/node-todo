@@ -2,9 +2,9 @@
 <h2>Greetings</h2>
 
 {{#if todos.length}}
-<ul class="todo-wrapper">
+<div class="todo-wrapper">
     {{#each todos}}
-        <li class="todo">
+        <div class="todo">
             <form action="/complete" method="POST">
                 <label>
                     {{#if this.completed}}
@@ -18,9 +18,9 @@
                     <input type="hidden" value="{{this._id}}" name="id">
                 </label>
             </form>
-        </li>
+        </div>
     {{/each}}
-</ul>
+</div>
 {{else}}
     <p>No todos</p>
 {{/if}}

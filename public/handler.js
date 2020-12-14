@@ -1,4 +1,4 @@
-const todosList = document.querySelectorAll('ul.todo-wrapper li input[name="completed"]');
+const todosList = document.querySelectorAll('div.todo-wrapper div input[name="completed"]');
 
 todosList.forEach(todo => {
     todo.addEventListener('click', handleCheckbox);
