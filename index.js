@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
+const favicon = require('serve-favicon');
 const path = require('path');
 const bodyParser = require('body-parser');
 const todoRoutes = require('./routes/todos');
@@ -20,6 +21,7 @@ app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(todoRoutes);
 
 async function start(){
