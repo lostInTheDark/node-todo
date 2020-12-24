@@ -7,6 +7,12 @@ body{
     background-color: #282828;
 }
 
+form .row{
+    margin-bottom: 0;
+}
+
+/* Index page styles*/
+
 .indent{
     margin: 0 2vw;
 }
@@ -47,4 +53,5 @@ ul.todo-wrapper{
 .todo label:hover{
     transform: scale(1.2);
 }
+
 

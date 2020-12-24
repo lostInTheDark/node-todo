@@ -5,8 +5,16 @@
     {{> navbar }}
 
     <div class="container">
+        {{#if success_messages }}
+            <div class="">{{success_messages}}</div>
+        {{/if}}
+        {{#if error_messages }}
+            <div class="">{{error_messages}}</div>
+        {{/if}}
+
         {{{ body }}}
     </div>
+
     <script src="/form-behave.js"></script>
 </body>
 </html>
